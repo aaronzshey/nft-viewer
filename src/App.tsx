@@ -1,7 +1,7 @@
-import { clsx } from "clsx/lite";
 import React from "react";
+import clsx from "clsx/lite";
 import "./App.css";
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { SimpleGrid, Box, Center } from "@chakra-ui/react";
 
 function returnRandomColor(): string {
   const colors = [
@@ -44,11 +44,22 @@ function returnRandomColor(): string {
 function App() {
   return (
     <>
-      <SimpleGrid columns={4} className="h-screen w-screen bg-black">
+      <Center className="font-saira w-screen h-screen absolute text-6xl z-10 font-black">
+        Contract Address
+      </Center>
+      <SimpleGrid columns={4} className="h-screen w-screen bg-black blur-md">
         {[
           1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         ].map((x) => {
-          return <Box key={x} className={returnRandomColor()}></Box>;
+          return (
+            <Box
+              key={x}
+              className={clsx(
+                returnRandomColor(),
+                "duration-1000 grayscale hover:grayscale-0",
+              )}
+            ></Box>
+          );
         })}
       </SimpleGrid>
     </>
