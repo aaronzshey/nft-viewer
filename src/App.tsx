@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx/lite";
 import "./App.css";
-import { SimpleGrid, Box, Center } from "@chakra-ui/react";
+import { SimpleGrid, Box, Center, VStack, Text } from "@chakra-ui/react";
 
 function returnRandomColor(): string {
   const colors = [
@@ -44,9 +44,28 @@ function returnRandomColor(): string {
 function App() {
   return (
     <>
-      <Center className="font-saira w-screen h-screen absolute text-6xl z-10 font-black">
-        Contract Address
+      <Center className="w-screen h-screen absolute ">
+        <Box className="z-10 w-3/4 h-3/4 outline-2 outline-white outline rounded-xl p-4 bg-gray-100 border-opacity-70 bg-opacity-50">
+          <VStack className="w-max text-left">
+            <Text>A</Text>
+            <Text>B</Text>
+            <Text>C</Text>
+          </VStack>
+        </Box>
       </Center>
+      {/*
+      <Center className="w-screen h-screen absolute">
+        <VStack
+          spacing={1}
+          className="absolute z-10 p-3.5 text-black font-saira"
+        >
+          <Box className="text-6xl font-black">Contract Address:</Box>
+          <Box className="text-3xl font-black">
+            0x06b0ED5338e36623b859081B0692F7dE33aF67E5
+          </Box>
+        </VStack>
+      </Center>
+      */}
       <SimpleGrid columns={4} className="h-screen w-screen bg-black blur-md">
         {[
           1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
