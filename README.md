@@ -11,4 +11,6 @@ The website displays a single NFT, minted in the backend on a local Hardhat node
 
 ### What's in store
 
-A search function similar to a block explorer (though more limited in scope) would be interesting.  Additionally, adding verification using the unused "numOfOwners" variable in the contract by searching block logs would also be interesting. 
+A search function similar to a block explorer (though more limited in scope) would be interesting.  Additionally, adding verification using the unused "numOfOwners" variable in the contract by searching block logs would also be interesting.
+
+I also initially intended the background of the 
